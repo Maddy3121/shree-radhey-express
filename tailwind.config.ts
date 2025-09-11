@@ -57,11 +57,24 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "corporate-blue": "hsl(var(--corporate-blue))",
+        "corporate-blue-light": "hsl(var(--corporate-blue-light))",
+        "logistics-orange": "hsl(var(--logistics-orange))",
+        "logistics-orange-light": "hsl(var(--logistics-orange-light))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        'gradient-primary': 'var(--gradient-primary)',
+        'gradient-accent': 'var(--gradient-accent)',
+        'gradient-hero': 'var(--gradient-hero)',
+      },
+      boxShadow: {
+        'corporate': 'var(--shadow-corporate)',
+        'accent': 'var(--shadow-accent)',
       },
       keyframes: {
         "accordion-down": {
