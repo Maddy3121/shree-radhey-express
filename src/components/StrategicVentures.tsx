@@ -22,6 +22,13 @@ const StrategicVentures = () => {
       icon: Target
     },
     {
+      title: "Corporate Associations",
+      duration: "Ongoing",
+      description: "Strong working associations with ICDS (Integrated Child Development Services), Gati, Caper India, and other reputed organizations for extended network coverage.",
+      achievement: "Multi-sector Partnerships",
+      icon: Handshake
+    },
+    {
       title: "Biscuit Industry Experience",
       duration: "7 Years",
       description: "Extensive experience working with leading brands such as Priya Gold and Bonbon Industries in the biscuit manufacturing and distribution sector.",
@@ -36,9 +43,9 @@ const StrategicVentures = () => {
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
-              Strategic <span className="text-logistics-orange">Ventures</span>
-            </h2>
+        <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          Strategic Ventures & <span className="text-logistics-orange">Associations</span>
+        </h2>
             <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6"></div>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Building strong partnerships and leveraging proven industry experience
@@ -121,7 +128,7 @@ const StrategicVentures = () => {
                   Our strategic partnerships and industry experience demonstrate our commitment to delivering reliable, 
                   scalable logistics solutions across diverse sectors and challenging projects.
                 </p>
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-4 gap-8">
                   <div>
                     <div className="text-3xl font-bold mb-2">🏭</div>
                     <div className="font-semibold">Heavy Equipment</div>
@@ -130,12 +137,17 @@ const StrategicVentures = () => {
                   <div>
                     <div className="text-3xl font-bold mb-2">🌾</div>
                     <div className="font-semibold">Government Projects</div>
-                    <div className="text-sm text-accent-foreground/80">NAFED State Distribution</div>
+                    <div className="text-sm text-accent-foreground/80">NAFED & ICDS</div>
                   </div>
                   <div>
                     <div className="text-3xl font-bold mb-2">🍪</div>
                     <div className="font-semibold">FMCG Brands</div>
                     <div className="text-sm text-accent-foreground/80">7 Years Industry Experience</div>
+                  </div>
+                  <div>
+                    <div className="text-3xl font-bold mb-2">🤝</div>
+                    <div className="font-semibold">Corporate Networks</div>
+                    <div className="text-sm text-accent-foreground/80">Gati, Caper India & More</div>
                   </div>
                 </div>
               </div>

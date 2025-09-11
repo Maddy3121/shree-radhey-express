@@ -29,7 +29,11 @@ const Services = () => {
     { name: "FMCG Products", description: "Fast-moving consumer goods distribution" },
     { name: "Food Products", description: "Temperature-controlled and safe food transportation" },
     { name: "Ration Distribution", description: "Large-scale government and institutional supply" },
-    { name: "Heavy Equipment", description: "Specialized handling of industrial machinery" }
+    { name: "Heavy Equipment", description: "Specialized handling with long platform trailers" },
+    { name: "ATM Services", description: "ATM transportation & installation services" },
+    { name: "Plant Shifting", description: "Specialized project movements & plant relocations" },
+    { name: "Infrastructure", description: "Critical and high-value project cargo" },
+    { name: "Manufacturing", description: "Precision handling for manufacturing sectors" }
   ];
 
   return (
@@ -117,8 +121,8 @@ const Services = () => {
           </Card>
 
           {/* Industries Served */}
-          <div>
-            <h3 className="text-3xl font-bold text-foreground text-center mb-12">Industries We Serve</h3>
+           <div>
+            <h3 className="text-3xl font-bold text-foreground text-center mb-12">Industries & Specialized Services</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {industries.map((industry, index) => (
                 <Card key={index} className="border-0 shadow-corporate hover:bg-gradient-primary hover:text-primary-foreground group transition-all duration-300">
@@ -129,6 +133,43 @@ const Services = () => {
                 </Card>
               ))}
             </div>
+            
+            {/* Specialized Services Highlight */}
+            <Card className="mt-12 border-0 shadow-corporate bg-gradient-hero text-primary-foreground">
+              <CardContent className="p-8">
+                <h4 className="text-2xl font-bold text-center mb-6">Specialized Heavy Equipment Services</h4>
+                <div className="grid md:grid-cols-2 gap-6 text-sm">
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                      Long platform trailer services
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                      Oversized consignment handling
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                      ATM transportation & installation
+                    </div>
+                  </div>
+                  <div className="space-y-2">
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                      Plant shifting & relocation
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                      Critical project movements
+                    </div>
+                    <div className="flex items-center">
+                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                      Skilled handling & planning
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
