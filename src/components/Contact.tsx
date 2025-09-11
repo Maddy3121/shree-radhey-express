@@ -22,7 +22,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Phone",
-      details: "+91 XXXXX XXXXX",
+      details: "+91 9359001122 / 9140334550",
       description: "Call us for immediate assistance"
     },
     {
@@ -191,7 +191,7 @@ const Contact = () => {
                     Contact us today for competitive pricing and reliable service.
                   </p>
                   <Button variant="accent" size="lg">
-                    Call Now: +91 XXXXX XXXXX
+                    Call Now: +91 9359001122
                   </Button>
                 </CardContent>
               </Card>
