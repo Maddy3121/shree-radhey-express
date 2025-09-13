@@ -119,7 +119,63 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
-  body {
-    @apply bg-background text-foreground;
-  }
+body {
+  @apply bg-background text-foreground;
+}
+
+/* Theme Variants */
+.theme-ocean {
+  --primary: 200 85% 35%;
+  --primary-foreground: 210 20% 98%;
+  --logistics-orange: 187 85% 53%;
+  --corporate-blue: 200 85% 35%;
+  --corporate-blue-light: 187 85% 53%;
+}
+
+.theme-forest {
+  --primary: 158 64% 52%;
+  --primary-foreground: 220 14% 11%;
+  --logistics-orange: 142 71% 45%;
+  --corporate-blue: 158 64% 52%;
+  --corporate-blue-light: 142 71% 45%;
+}
+
+.theme-sunset {
+  --primary: 0 84% 60%;
+  --primary-foreground: 210 20% 98%;
+  --logistics-orange: 43 96% 56%;
+  --corporate-blue: 0 84% 60%;
+  --corporate-blue-light: 43 96% 56%;
+}
+
+.theme-purple {
+  --primary: 262 83% 58%;
+  --primary-foreground: 210 20% 98%;
+  --logistics-orange: 271 81% 56%;
+  --corporate-blue: 262 83% 58%;
+  --corporate-blue-light: 271 81% 56%;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.8);
+}
 }
