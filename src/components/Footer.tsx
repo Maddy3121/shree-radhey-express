@@ -29,7 +29,7 @@ const Footer = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Phone className="w-4 h-4 text-logistics-orange" />
-                  <span>+91 XXXXX XXXXX</span>
+                  <span>+91 9359001122 / 9140334550</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-logistics-orange" />
@@ -69,8 +69,12 @@ const Footer = () => {
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-sm text-primary-foreground/80 mb-4 md:mb-0">
-              © 2024 Shree Radhe Logistics Pvt Ltd. All rights reserved.
+            <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-primary-foreground/80 mb-4 md:mb-0">
+              <span>© 2024 Shree Radhe Logistics Pvt Ltd. All rights reserved.</span>
+              <div className="flex gap-4 text-logistics-orange font-medium">
+                <span>📞 9359001122</span>
+                <span>📞 9140334550</span>
+              </div>
             </div>
             <div className="flex space-x-6 text-sm text-primary-foreground/80">
               <span>Initial Capital: ₹20 Lakhs</span>

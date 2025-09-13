@@ -39,10 +39,10 @@ const Hero = () => {
               Get Quote Now
             </Button>
             <Button 
-              variant="outline" 
+              variant="secondary" 
               size="lg"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-lg px-8 py-6 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10"
+              className="text-lg px-8 py-6 border-2 border-white/50 text-white bg-white/20 hover:bg-white/30 backdrop-blur-sm"
             >
               Learn More
             </Button>
