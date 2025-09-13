@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Truck, Package, MapPin, Shield } from "lucide-react";
+import truckImage from "@/assets/truck-pipes.jpg";
 
 const Services = () => {
   const services = [
@@ -41,12 +42,12 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 hover-scale">
               Our <span className="text-logistics-orange">Services</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6"></div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6 animate-[scale-in_0.8s_ease-out]"></div>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-[fade-in_1.2s_ease-out]">
               Comprehensive logistics solutions tailored to your business needs
             </p>
           </div>
@@ -56,9 +57,9 @@ const Services = () => {
             {services.map((service, index) => {
               const IconComponent = service.icon;
               return (
-                <Card key={index} className="border-0 shadow-corporate hover:shadow-accent transition-all duration-300 group">
+                <Card key={index} className="border-0 shadow-corporate hover:shadow-accent transition-all duration-300 group hover-scale animate-[fade-in_0.8s_ease-out]" style={{animationDelay: `${index * 0.2}s`}}>
                   <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-accent transition-all duration-300">
+                    <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4 group-hover:shadow-accent group-hover:animate-pulse transition-all duration-300">
                       <IconComponent className="w-8 h-8 text-primary-foreground" />
                     </div>
                     <h3 className="text-xl font-bold text-foreground">{service.title}</h3>
@@ -72,7 +73,7 @@ const Services = () => {
           </div>
 
           {/* Fleet & Partnerships */}
-          <Card className="border-0 shadow-corporate mb-16">
+          <Card className="border-0 shadow-corporate mb-16 hover-scale animate-[fade-in_1s_ease-out]">
             <CardContent className="p-8">
               <div className="grid md:grid-cols-2 gap-8 items-center">
                 <div>
@@ -81,38 +82,30 @@ const Services = () => {
                     Our success is built on a foundation of strong fleet ownership combined with strategic partnerships with reputed transporters across India.
                   </p>
                   <ul className="space-y-2 text-muted-foreground">
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                    <li className="flex items-center hover-scale">
+                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3 animate-pulse"></div>
                       Own fleet of modern, well-maintained vehicles
                     </li>
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                    <li className="flex items-center hover-scale">
+                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3 animate-pulse"></div>
                       Strategic partnerships with trusted transporters
                     </li>
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                    <li className="flex items-center hover-scale">
+                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3 animate-pulse"></div>
                       Real-time tracking and monitoring systems
                     </li>
                   </ul>
                 </div>
-                <div className="bg-gradient-primary rounded-xl p-6 text-primary-foreground">
-                  <h4 className="text-xl font-bold mb-4">Coverage Areas</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span>North India</span>
-                      <span className="font-semibold">100%</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Central India</span>
-                      <span className="font-semibold">95%</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Western India</span>
-                      <span className="font-semibold">90%</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Eastern India</span>
-                      <span className="font-semibold">85%</span>
+                <div className="relative">
+                  <img 
+                    src={truckImage} 
+                    alt="Heavy equipment transportation truck with pipes" 
+                    className="rounded-xl shadow-lg w-full h-64 object-cover hover-scale"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-corporate-blue/60 to-transparent rounded-xl flex items-end p-6">
+                    <div className="text-white">
+                      <h4 className="text-xl font-bold mb-2">Heavy Equipment Transport</h4>
+                      <p className="text-sm">Specialized handling of oversized consignments</p>
                     </div>
                   </div>
                 </div>
@@ -124,8 +117,8 @@ const Services = () => {
            <div>
             <h3 className="text-3xl font-bold text-foreground text-center mb-12">Industries & Specialized Services</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              {industries.map((industry, index) => (
-                <Card key={index} className="border-0 shadow-corporate hover:bg-gradient-primary hover:text-primary-foreground group transition-all duration-300">
+               {industries.map((industry, index) => (
+                <Card key={index} className="border-0 shadow-corporate hover:bg-gradient-primary hover:text-primary-foreground group transition-all duration-300 hover-scale animate-[fade-in_0.6s_ease-out]" style={{animationDelay: `${index * 0.1}s`}}>
                   <CardContent className="p-6 text-center">
                     <h4 className="text-lg font-bold mb-2 group-hover:text-primary-foreground">{industry.name}</h4>
                     <p className="text-sm text-muted-foreground group-hover:text-primary-foreground/80">{industry.description}</p>

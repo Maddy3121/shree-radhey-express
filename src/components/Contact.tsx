@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import emailContactImage from "@/assets/email-contact.png";
 
 const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
@@ -57,19 +58,28 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6">
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 hover-scale">
               Contact <span className="text-logistics-orange">Us</span>
             </h2>
-            <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6"></div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+            <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6 animate-[scale-in_0.8s_ease-out]"></div>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-[fade-in_1.2s_ease-out]">
               Ready to streamline your logistics? Get in touch with our team for customized solutions
             </p>
+            
+            {/* Email Contact Image */}
+            <div className="flex justify-center mt-8 animate-[scale-in_1.4s_ease-out]">
+              <img 
+                src={emailContactImage} 
+                alt="Email contact information" 
+                className="max-w-xs rounded-lg shadow-lg hover-scale"
+              />
+            </div>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Form */}
-            <Card className="border-0 shadow-corporate">
+            <Card className="border-0 shadow-corporate hover-scale animate-[fade-in_0.8s_ease-out]">
               <CardHeader>
                 <h3 className="text-2xl font-bold text-foreground">Get a Quote</h3>
                 <p className="text-muted-foreground">Tell us about your logistics requirements</p>
@@ -136,10 +146,10 @@ const Contact = () => {
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon;
                   return (
-                    <Card key={index} className="border-0 shadow-corporate hover:shadow-accent transition-all duration-300">
+                    <Card key={index} className="border-0 shadow-corporate hover:shadow-accent transition-all duration-300 hover-scale animate-[fade-in_0.6s_ease-out]" style={{animationDelay: `${index * 0.2}s`}}>
                       <CardContent className="p-6">
                         <div className="flex items-start space-x-4">
-                          <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0">
+                          <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0 group-hover:animate-pulse">
                             <IconComponent className="w-6 h-6 text-primary-foreground" />
                           </div>
                           <div>

@@ -70,10 +70,10 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-primary-foreground/80 mb-4 md:mb-0">
-              <span>© 2024 Shree Radhe Logistics Pvt Ltd. All rights reserved.</span>
-              <div className="flex gap-4 text-logistics-orange font-medium">
-                <span>📞 9359001122</span>
-                <span>📞 9140334550</span>
+              <span>© 2024 Shri Radhey Logistics Pvt Ltd. All rights reserved.</span>
+              <div className="flex flex-col md:flex-row gap-4 text-logistics-orange font-medium">
+                <span className="hover-scale">📞 9359001122</span>
+                <span className="hover-scale">📞 9140334550</span>
               </div>
             </div>
             <div className="flex space-x-6 text-sm text-primary-foreground/80">
