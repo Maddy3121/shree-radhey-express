@@ -29,7 +29,7 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      details: "info@shreeradhelogistics.com",
+      details: "info@shriradheylogistics.co.in",
       description: "Send us your requirements"
     },
     {
