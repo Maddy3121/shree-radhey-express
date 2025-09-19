@@ -152,9 +152,9 @@ const Contact = () => {
                           <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0 group-hover:animate-pulse">
                             <IconComponent className="w-6 h-6 text-primary-foreground" />
                           </div>
-                          <div>
+                          <div className="min-w-0 flex-1">
                             <h4 className="font-bold text-foreground mb-1">{info.title}</h4>
-                            <p className="text-logistics-orange font-semibold mb-1">{info.details}</p>
+                            <p className="text-logistics-orange font-semibold mb-1 break-all text-sm">{info.details}</p>
                             <p className="text-sm text-muted-foreground">{info.description}</p>
                           </div>
                         </div>
