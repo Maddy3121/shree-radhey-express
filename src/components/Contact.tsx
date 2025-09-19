@@ -142,7 +142,7 @@ const Contact = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               {/* Contact Details */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 {contactInfo.map((info, index) => {
                   const IconComponent = info.icon;
                   return (
@@ -154,7 +154,7 @@ const Contact = () => {
                           </div>
                           <div className="min-w-0 flex-1">
                             <h4 className="font-bold text-foreground mb-1">{info.title}</h4>
-                            <p className="text-logistics-orange font-semibold mb-1 break-all text-sm">{info.details}</p>
+                            <p className="text-logistics-orange font-semibold mb-1 text-sm leading-relaxed word-break-all">{info.details}</p>
                             <p className="text-sm text-muted-foreground">{info.description}</p>
                           </div>
                         </div>
