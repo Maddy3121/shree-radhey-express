@@ -154,8 +154,10 @@ const Contact = () => {
                           </div>
                           <div className="min-w-0 flex-1">
                             <h4 className="font-bold text-foreground mb-1">{info.title}</h4>
-                            <p className="text-logistics-orange font-semibold mb-1 text-sm leading-relaxed word-break-all">{info.details}</p>
-                            <p className="text-sm text-muted-foreground">{info.description}</p>
+                            <div className="bg-muted/50 px-3 py-2 rounded-md inline-block min-w-fit">
+                              <p className="text-logistics-orange font-semibold text-sm whitespace-nowrap">{info.details}</p>
+                            </div>
+                            <p className="text-sm text-muted-foreground mt-2">{info.description}</p>
                           </div>
                         </div>
                       </CardContent>
