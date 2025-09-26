@@ -4,13 +4,58 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import emailContactImage from "@/assets/email-contact.png";
 
 const Contact = () => {
+  const { toast } = useToast();
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log("Form submitted");
+    
+    const formData = new FormData(e.target as HTMLFormElement);
+    const name = formData.get('name') as string;
+    const company = formData.get('company') as string;
+    const email = formData.get('email') as string;
+    const phone = formData.get('phone') as string;
+    const service = formData.get('service') as string;
+    const message = formData.get('message') as string;
+
+    // Create email content
+    const subject = `Quote Request from ${company || name} - ${service || 'Logistics Services'}`;
+    const body = `Dear Shri Radhey Logistics Team,
+
+I am writing to request a quote for your logistics services.
+
+Contact Information:
+- Name: ${name}
+- Company: ${company || 'N/A'}
+- Email: ${email}
+- Phone: ${phone}
+
+Service Required: ${service || 'Not specified'}
+
+Message:
+${message}
+
+Please provide a detailed quote including pricing, timeline, and terms of service.
+
+Thank you for your time and consideration.
+
+Best regards,
+${name}`;
+
+    // Create mailto link
+    const mailtoLink = `mailto:info@shriradheylogistics.co.in?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Open email client
+    window.location.href = mailtoLink;
+    
+    // Show success message
+    toast({
+      title: "Opening Email Client",
+      description: "Your email application will open with a pre-filled quote request.",
+    });
   };
 
   const contactInfo = [
@@ -99,22 +144,22 @@ const Contact = () => {
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="name">Full Name *</Label>
-                      <Input id="name" placeholder="Your full name" required />
+                      <Input id="name" name="name" placeholder="Your full name" required />
                     </div>
                     <div>
                       <Label htmlFor="company">Company Name</Label>
-                      <Input id="company" placeholder="Your company" />
+                      <Input id="company" name="company" placeholder="Your company" />
                     </div>
                   </div>
                   
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <Label htmlFor="email">Email Address *</Label>
-                      <Input id="email" type="email" placeholder="your@email.com" required />
+                      <Input id="email" name="email" type="email" placeholder="your@email.com" required />
                     </div>
                     <div>
                       <Label htmlFor="phone">Phone Number *</Label>
-                      <Input id="phone" placeholder="+91 XXXXX XXXXX" required />
+                      <Input id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required />
                     </div>
                   </div>
 
@@ -122,6 +167,7 @@ const Contact = () => {
                     <Label htmlFor="service">Service Required</Label>
                     <select 
                       id="service" 
+                      name="service"
                       className="w-full p-3 border border-input rounded-md bg-background"
                     >
                       <option value="">Select a service</option>
@@ -136,6 +182,7 @@ const Contact = () => {
                     <Label htmlFor="message">Message *</Label>
                     <Textarea 
                       id="message" 
+                      name="message"
                       placeholder="Tell us about your logistics requirements, pickup/delivery locations, cargo details, etc." 
                       className="min-h-32"
                       required 
