@@ -77,13 +77,13 @@ const Contact = () => {
               Ready to streamline your logistics? Get in touch with our team for customized solutions
             </p>
             
-            {/* Email Contact Image */}
+            {/* Email Contact Box */}
             <div className="flex justify-center mt-8 animate-[scale-in_1.4s_ease-out]">
-              <img 
-                src={emailContactImage} 
-                alt="Email contact information" 
-                className="max-w-xs rounded-lg shadow-lg hover-scale"
-              />
+              <div className="bg-slate-800/90 px-6 py-4 rounded-lg shadow-lg border border-logistics-orange/20">
+                <p className="text-logistics-orange font-semibold text-sm sm:text-base break-words text-center">
+                  info@shriradheylogistics.co.in
+                </p>
+              </div>
             </div>
           </div>
 
