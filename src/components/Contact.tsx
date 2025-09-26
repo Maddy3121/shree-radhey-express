@@ -164,8 +164,8 @@ const Contact = () => {
                           </div>
                           <div className="min-w-0 flex-1">
                             <h4 className="font-bold text-foreground mb-1">{info.title}</h4>
-                            <div className="bg-slate-800/90 px-4 py-3 rounded-lg w-full max-w-sm">
-                              <p className="text-logistics-orange font-semibold text-xs break-all leading-relaxed">{info.details}</p>
+                            <div className="bg-slate-800/90 px-3 py-2 rounded-lg w-full max-w-full sm:max-w-md">
+                              <p className="text-logistics-orange font-semibold text-xs sm:text-sm break-words leading-relaxed">{info.details}</p>
                             </div>
                             <p className="text-sm text-muted-foreground mt-2">{info.description}</p>
                           </div>
