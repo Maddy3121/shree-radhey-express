@@ -54,8 +54,18 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="py-20 bg-gradient-to-br from-muted/30 via-muted/20 to-background relative overflow-hidden">
+      {/* Subtle dark theme with stars */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-10 left-10 w-1 h-1 bg-logistics-orange rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-1 h-1 bg-logistics-orange rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
+        <div className="absolute bottom-40 left-1/4 w-1 h-1 bg-logistics-orange rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
+        <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-logistics-orange rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute bottom-20 right-10 w-1 h-1 bg-logistics-orange rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
+        {/* Subtle truck silhouette */}
+        <div className="absolute bottom-10 right-1/4 text-logistics-orange/5 text-6xl">🚛</div>
+      </div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <div className="text-center mb-16 animate-fade-in">
@@ -154,8 +164,8 @@ const Contact = () => {
                           </div>
                           <div className="min-w-0 flex-1">
                             <h4 className="font-bold text-foreground mb-1">{info.title}</h4>
-                            <div className="bg-muted/50 px-3 py-2 rounded-md inline-block min-w-fit">
-                              <p className="text-logistics-orange font-semibold text-sm whitespace-nowrap">{info.details}</p>
+                            <div className="bg-slate-800/80 px-4 py-3 rounded-lg inline-block w-full max-w-xs">
+                              <p className="text-logistics-orange font-semibold text-sm break-all leading-relaxed">{info.details}</p>
                             </div>
                             <p className="text-sm text-muted-foreground mt-2">{info.description}</p>
                           </div>
