@@ -9,10 +9,12 @@ import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 import ScrollAnimatedSection from "@/components/ScrollAnimatedSection";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const Index = () => {
   return (
     <div className="min-h-screen pt-20">
+      <ScrollProgress />
       <ThemeSwitcher />
       <Navigation />
       <Hero />
