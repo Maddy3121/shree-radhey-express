@@ -208,4 +208,55 @@ html {
 ::-webkit-scrollbar-thumb:hover {
   background: hsl(var(--primary) / 0.8);
 }
+
+/* Interactive Animation Utilities */
+@keyframes ripple {
+  0% {
+    transform: scale(0);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}
+
+@keyframes click-bounce {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.95);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Utility Classes */
+.active-bounce {
+  animation: click-bounce 0.3s ease-out;
+}
+
+.float-animation {
+  animation: float 3s ease-in-out infinite;
+}
+
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-xl hover:-translate-y-2;
+}
+
+.button-press {
+  @apply active:scale-95 transition-transform duration-100;
+}
+
+.glow-on-hover {
+  @apply transition-all duration-300 hover:shadow-accent;
+}
 }

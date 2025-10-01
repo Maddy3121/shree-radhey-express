@@ -19,19 +19,19 @@ const Index = () => {
       <ScrollAnimatedSection animation="fade-up">
         <About />
       </ScrollAnimatedSection>
-      <ScrollAnimatedSection animation="slide-up" delay={200}>
+      <ScrollAnimatedSection animation="slide-up">
         <Services />
       </ScrollAnimatedSection>
-      <ScrollAnimatedSection animation="fade-left" delay={100}>
+      <ScrollAnimatedSection animation="fade-left">
         <CompanyStructure />
       </ScrollAnimatedSection>
-      <ScrollAnimatedSection animation="fade-right" delay={150}>
+      <ScrollAnimatedSection animation="fade-right">
         <StrategicVentures />
       </ScrollAnimatedSection>
-      <ScrollAnimatedSection animation="scale-up" delay={100}>
+      <ScrollAnimatedSection animation="scale-up">
         <Vision />
       </ScrollAnimatedSection>
-      <ScrollAnimatedSection animation="fade-up" delay={200}>
+      <ScrollAnimatedSection animation="fade-up">
         <Contact />
       </ScrollAnimatedSection>
       <Footer />
