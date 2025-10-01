@@ -71,6 +71,11 @@ export default {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-accent': 'var(--gradient-accent)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-card': 'var(--gradient-card)',
+        'gradient-diagonal': 'var(--gradient-diagonal)',
+        'gradient-radial': 'var(--gradient-radial)',
+        'gradient-text': 'var(--gradient-text)',
+        'gradient-border': 'var(--gradient-border)',
       },
       boxShadow: {
         'corporate': 'var(--shadow-corporate)',

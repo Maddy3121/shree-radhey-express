@@ -3,36 +3,37 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-corporate-blue text-primary-foreground py-16">
-      <div className="container mx-auto px-4">
+    <footer className="bg-gradient-primary text-white py-16 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-radial opacity-50"></div>
+      <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             {/* Company Info */}
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-accent rounded-lg flex items-center justify-center">
-                  <span className="text-accent-foreground font-bold text-lg">SR</span>
+                <div className="w-10 h-10 bg-gradient-diagonal rounded-lg flex items-center justify-center shadow-accent">
+                  <span className="text-white font-bold text-lg">SR</span>
                 </div>
                 <div>
-                  <h3 className="text-xl font-bold">Shree Radhe Logistics</h3>
-                  <p className="text-sm text-primary-foreground/80">Pvt Ltd</p>
+                  <h3 className="text-xl font-bold text-white">Shree Radhe Logistics</h3>
+                  <p className="text-sm text-white/80">Pvt Ltd</p>
                 </div>
               </div>
-              <p className="text-primary-foreground/90 mb-4 max-w-md">
+              <p className="text-white/90 mb-4 max-w-md">
                 With over 15 years of experience, we are your trusted partner for reliable logistics 
                 and transportation solutions across India.
               </p>
-              <div className="space-y-2 text-sm">
+              <div className="space-y-2 text-sm text-white/90">
                 <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 text-logistics-orange" />
+                  <MapPin className="w-4 h-4 gradient-text" />
                   <span>Head Office: Lucknow, Uttar Pradesh</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 text-logistics-orange" />
+                  <Phone className="w-4 h-4 gradient-text" />
                   <span>+91 9359001122 / 9140334550</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 text-logistics-orange" />
+                  <Mail className="w-4 h-4 gradient-text" />
                   <span>info@shreeradhelogistics.com</span>
                 </div>
               </div>
@@ -40,8 +41,8 @@ const Footer = () => {
 
             {/* Services */}
             <div>
-              <h4 className="text-lg font-bold mb-4">Our Services</h4>
-              <ul className="space-y-2 text-sm text-primary-foreground/80">
+              <h4 className="text-lg font-bold mb-4 text-white">Our Services</h4>
+              <ul className="space-y-2 text-sm text-white/80">
                 <li>Full Truck Load (FTL)</li>
                 <li>Part Truck Load (PTL)</li>
                 <li>FMCG Transportation</li>
@@ -53,8 +54,8 @@ const Footer = () => {
 
             {/* Company */}
             <div>
-              <h4 className="text-lg font-bold mb-4">Company</h4>
-              <ul className="space-y-2 text-sm text-primary-foreground/80">
+              <h4 className="text-lg font-bold mb-4 text-white">Company</h4>
+              <ul className="space-y-2 text-sm text-white/80">
                 <li>About Us</li>
                 <li>Our Structure</li>
                 <li>Strategic Ventures</li>
@@ -65,18 +66,18 @@ const Footer = () => {
             </div>
           </div>
 
-          <Separator className="mb-8 bg-primary-foreground/20" />
+          <Separator className="mb-8 bg-white/20" />
 
           {/* Bottom Section */}
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-primary-foreground/80 mb-4 md:mb-0">
+            <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-white/80 mb-4 md:mb-0">
               <span>© 2024 Shri Radhey Logistics Pvt Ltd. All rights reserved.</span>
-              <div className="flex flex-col md:flex-row gap-4 text-logistics-orange font-medium">
+              <div className="flex flex-col md:flex-row gap-4 gradient-text font-medium">
                 <span className="hover-scale">📞 9359001122</span>
                 <span className="hover-scale">📞 9140334550</span>
               </div>
             </div>
-            <div className="flex space-x-6 text-sm text-primary-foreground/80">
+            <div className="flex space-x-6 text-sm text-white/80">
               <span>Initial Capital: ₹20 Lakhs</span>
               <span>Directors: 2</span>
               <span>Staff: 20+</span>
