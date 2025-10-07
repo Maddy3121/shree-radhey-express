@@ -2,6 +2,8 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Services from "@/components/Services";
+import IndustriesServed from "@/components/IndustriesServed";
+import CoreOfferings from "@/components/CoreOfferings";
 import CompanyStructure from "@/components/CompanyStructure";
 import StrategicVentures from "@/components/StrategicVentures";
 import Vision from "@/components/Vision";
@@ -23,6 +25,12 @@ const Index = () => {
       </ScrollAnimatedSection>
       <ScrollAnimatedSection animation="slide-up">
         <Services />
+      </ScrollAnimatedSection>
+      <ScrollAnimatedSection animation="fade-left">
+        <IndustriesServed />
+      </ScrollAnimatedSection>
+      <ScrollAnimatedSection animation="fade-right">
+        <CoreOfferings />
       </ScrollAnimatedSection>
       <ScrollAnimatedSection animation="fade-left">
         <CompanyStructure />
