@@ -3,15 +3,14 @@ import { MapPin, Phone, Mail } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-gradient-primary text-white py-16 relative overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-radial opacity-50"></div>
+    <footer className="bg-corporate-blue text-white py-16 relative overflow-hidden">
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-4 gap-8 mb-12">
             {/* Company Info */}
             <div className="md:col-span-2">
               <div className="flex items-center space-x-2 mb-4">
-                <div className="w-10 h-10 bg-gradient-diagonal rounded-lg flex items-center justify-center shadow-accent">
+                <div className="w-10 h-10 bg-logistics-orange rounded-lg flex items-center justify-center shadow-accent">
                   <span className="text-white font-bold text-lg">SR</span>
                 </div>
                 <div>
@@ -25,15 +24,15 @@ const Footer = () => {
               </p>
               <div className="space-y-2 text-sm text-white/90">
                 <div className="flex items-center space-x-2">
-                  <MapPin className="w-4 h-4 gradient-text" />
+                  <MapPin className="w-4 h-4 text-logistics-orange" />
                   <span>Head Office: Lucknow, Uttar Pradesh</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Phone className="w-4 h-4 gradient-text" />
+                  <Phone className="w-4 h-4 text-logistics-orange" />
                   <span>+91 9359001122 / 9140334550</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Mail className="w-4 h-4 gradient-text" />
+                  <Mail className="w-4 h-4 text-logistics-orange" />
                   <span>info@shreeradhelogistics.com</span>
                 </div>
               </div>
@@ -72,7 +71,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex flex-col md:flex-row items-center gap-4 text-sm text-white/80 mb-4 md:mb-0">
               <span>© 2024 Shri Radhey Logistics Pvt Ltd. All rights reserved.</span>
-              <div className="flex flex-col md:flex-row gap-4 gradient-text font-medium">
+              <div className="flex flex-col md:flex-row gap-4 text-logistics-orange font-medium">
                 <span className="hover-scale">📞 9359001122</span>
                 <span className="hover-scale">📞 9140334550</span>
               </div>
