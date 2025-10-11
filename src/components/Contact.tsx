@@ -99,169 +99,167 @@ ${name}`;
   ];
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-muted/30 via-muted/20 to-background relative overflow-hidden">
-      {/* Subtle dark theme with stars */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-1 h-1 bg-logistics-orange rounded-full animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-1 h-1 bg-logistics-orange rounded-full animate-pulse" style={{animationDelay: '0.5s'}}></div>
-        <div className="absolute bottom-40 left-1/4 w-1 h-1 bg-logistics-orange rounded-full animate-pulse" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 right-1/3 w-1 h-1 bg-logistics-orange rounded-full animate-pulse" style={{animationDelay: '1.5s'}}></div>
-        <div className="absolute bottom-20 right-10 w-1 h-1 bg-logistics-orange rounded-full animate-pulse" style={{animationDelay: '2s'}}></div>
-        {/* Subtle truck silhouette */}
-        <div className="absolute bottom-10 right-1/4 text-logistics-orange/5 text-6xl">🚛</div>
+    <section id="contact" className="py-32 bg-background relative overflow-hidden">
+      {/* Modern gradient background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-corporate-blue/5 via-background to-logistics-orange/5"></div>
+      
+      {/* Animated pattern overlay */}
+      <div className="absolute inset-0 opacity-5">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-logistics-orange rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-20 right-20 w-96 h-96 bg-corporate-blue rounded-full blur-3xl animate-pulse" style={{animationDelay: '1s'}}></div>
       </div>
+
       <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-16 animate-fade-in">
-            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-6 hover-scale">
-              Contact <span className="text-logistics-orange">Us</span>
-            </h2>
-            <div className="w-24 h-1 bg-gradient-accent mx-auto mb-6 animate-[scale-in_0.8s_ease-out]"></div>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto animate-[fade-in_1.2s_ease-out]">
-              Ready to streamline your logistics? Get in touch with our team for customized solutions
-            </p>
-            
-            {/* Email Contact Box */}
-            <div className="flex justify-center mt-8 animate-[scale-in_1.4s_ease-out]">
-              <div className="bg-slate-800/90 px-6 py-4 rounded-lg shadow-lg border border-logistics-orange/20">
-                <p className="text-logistics-orange font-semibold text-sm sm:text-base break-words text-center">
-                  info@shriradheylogistics.co.in
-                </p>
-              </div>
+          <div className="text-center mb-20 animate-fade-in">
+            <div className="inline-block mb-4">
+              <span className="text-logistics-orange font-semibold text-sm uppercase tracking-wider">Get In Touch</span>
             </div>
+            <h2 className="text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Let's Start a <span className="text-transparent bg-clip-text bg-gradient-accent">Conversation</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              We're here to help streamline your logistics operations with tailored solutions
+            </p>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card className="border-0 shadow-corporate hover-scale animate-[fade-in_0.8s_ease-out]">
-              <CardHeader>
-                <h3 className="text-2xl font-bold text-foreground">Get a Quote</h3>
-                <p className="text-muted-foreground">Tell us about your logistics requirements</p>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="name">Full Name *</Label>
-                      <Input id="name" name="name" placeholder="Your full name" required />
-                    </div>
-                    <div>
-                      <Label htmlFor="company">Company Name</Label>
-                      <Input id="company" name="company" placeholder="Your company" />
-                    </div>
-                  </div>
-                  
-                  <div className="grid md:grid-cols-2 gap-4">
-                    <div>
-                      <Label htmlFor="email">Email Address *</Label>
-                      <Input id="email" name="email" type="email" placeholder="your@email.com" required />
-                    </div>
-                    <div>
-                      <Label htmlFor="phone">Phone Number *</Label>
-                      <Input id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required />
-                    </div>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="service">Service Required</Label>
-                    <select 
-                      id="service" 
-                      name="service"
-                      className="w-full p-3 border border-input rounded-md bg-background"
-                    >
-                      <option value="">Select a service</option>
-                      <option value="ftl">Full Truck Load (FTL)</option>
-                      <option value="ptl">Part Truck Load (PTL)</option>
-                      <option value="both">Both FTL & PTL</option>
-                      <option value="custom">Custom Solution</option>
-                    </select>
-                  </div>
-
-                  <div>
-                    <Label htmlFor="message">Message *</Label>
-                    <Textarea 
-                      id="message" 
-                      name="message"
-                      placeholder="Tell us about your logistics requirements, pickup/delivery locations, cargo details, etc." 
-                      className="min-h-32"
-                      required 
-                    />
-                  </div>
-
-                  <Button variant="corporate" size="lg" type="submit" className="w-full">
-                    Send Inquiry
-                  </Button>
-                </form>
-              </CardContent>
-            </Card>
-
-            {/* Contact Information */}
-            <div className="space-y-8">
-              {/* Contact Details */}
-              <div className="grid grid-cols-1 gap-6">
-                {contactInfo.map((info, index) => {
-                  const IconComponent = info.icon;
-                  return (
-                    <Card key={index} className="border-0 shadow-corporate hover:shadow-accent transition-all duration-300 hover-scale animate-[fade-in_0.6s_ease-out]" style={{animationDelay: `${index * 0.2}s`}}>
-                      <CardContent className="p-6">
-                        <div className="flex items-start space-x-4">
-                          <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center flex-shrink-0 group-hover:animate-pulse">
-                            <IconComponent className="w-6 h-6 text-primary-foreground" />
-                          </div>
-                          <div className="min-w-0 flex-1">
-                            <h4 className="font-bold text-foreground mb-1">{info.title}</h4>
-                            <div className="bg-slate-800/90 px-3 py-2 rounded-lg w-full max-w-full sm:max-w-md">
-                              <p className="text-logistics-orange font-semibold text-xs sm:text-sm break-words leading-relaxed">{info.details}</p>
-                            </div>
-                            <p className="text-sm text-muted-foreground mt-2">{info.description}</p>
-                          </div>
-                        </div>
-                      </CardContent>
-                    </Card>
-                  );
-                })}
-              </div>
-
-              {/* Branch Offices */}
-              <Card className="border-0 shadow-corporate">
-                <CardHeader>
-                  <h3 className="text-xl font-bold text-foreground">Branch Offices</h3>
+          <div className="grid lg:grid-cols-5 gap-12 items-start">
+            {/* Contact Form - Takes 3 columns */}
+            <div className="lg:col-span-3">
+              <Card className="border-0 shadow-2xl bg-card/50 backdrop-blur-sm hover:shadow-logistics-orange/10 transition-all duration-500 animate-[fade-in_0.8s_ease-out]">
+                <CardHeader className="pb-8">
+                  <h3 className="text-3xl font-bold text-foreground">Request a Quote</h3>
+                  <p className="text-muted-foreground text-lg">Fill out the form and we'll get back to you within 24 hours</p>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-4">
-                    {branches.map((branch, index) => (
-                      <div key={index} className="flex items-center justify-between p-4 bg-muted/50 rounded-lg">
-                        <div>
-                          <h4 className="font-semibold text-foreground">{branch.name}</h4>
-                          <p className="text-sm text-muted-foreground">{branch.address}</p>
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label htmlFor="name" className="text-base">Full Name *</Label>
+                        <Input id="name" name="name" placeholder="John Doe" required className="h-12 text-base" />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="company" className="text-base">Company Name</Label>
+                        <Input id="company" name="company" placeholder="Your Company Ltd." className="h-12 text-base" />
+                      </div>
+                    </div>
+                    
+                    <div className="grid md:grid-cols-2 gap-6">
+                      <div className="space-y-2">
+                        <Label htmlFor="email" className="text-base">Email Address *</Label>
+                        <Input id="email" name="email" type="email" placeholder="john@company.com" required className="h-12 text-base" />
+                      </div>
+                      <div className="space-y-2">
+                        <Label htmlFor="phone" className="text-base">Phone Number *</Label>
+                        <Input id="phone" name="phone" placeholder="+91 98765 43210" required className="h-12 text-base" />
+                      </div>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="service" className="text-base">Service Required</Label>
+                      <select 
+                        id="service" 
+                        name="service"
+                        className="w-full h-12 px-4 text-base border border-input rounded-md bg-background transition-all hover:border-logistics-orange/50 focus:border-logistics-orange focus:ring-2 focus:ring-logistics-orange/20"
+                      >
+                        <option value="">Select a service</option>
+                        <option value="ftl">Full Truck Load (FTL)</option>
+                        <option value="ptl">Part Truck Load (PTL)</option>
+                        <option value="both">Both FTL & PTL</option>
+                        <option value="custom">Custom Solution</option>
+                      </select>
+                    </div>
+
+                    <div className="space-y-2">
+                      <Label htmlFor="message" className="text-base">Message *</Label>
+                      <Textarea 
+                        id="message" 
+                        name="message"
+                        placeholder="Tell us about your logistics requirements, pickup/delivery locations, cargo details, timeline..." 
+                        className="min-h-40 text-base resize-none"
+                        required 
+                      />
+                    </div>
+
+                    <Button variant="corporate" size="lg" type="submit" className="w-full h-14 text-lg font-semibold hover:scale-[1.02] transition-transform">
+                      Send Message →
+                    </Button>
+                  </form>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Contact Information - Takes 2 columns */}
+            <div className="lg:col-span-2 space-y-6">
+              {/* Quick Contact Cards */}
+              {contactInfo.map((info, index) => {
+                const IconComponent = info.icon;
+                return (
+                  <Card 
+                    key={index} 
+                    className="border-0 shadow-lg bg-card/50 backdrop-blur-sm hover:shadow-logistics-orange/20 transition-all duration-300 hover:translate-x-2 animate-[fade-in_0.6s_ease-out]" 
+                    style={{animationDelay: `${index * 0.15}s`}}
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex items-start gap-4">
+                        <div className="w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center flex-shrink-0 shadow-lg">
+                          <IconComponent className="w-7 h-7 text-white" />
                         </div>
+                        <div className="flex-1 min-w-0">
+                          <p className="text-sm text-muted-foreground mb-1 uppercase tracking-wide">{info.title}</p>
+                          <p className="font-bold text-foreground text-lg mb-1 break-words">{info.details}</p>
+                          <p className="text-sm text-muted-foreground">{info.description}</p>
+                        </div>
+                      </div>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+
+              {/* Branch Offices */}
+              <Card className="border-0 shadow-lg bg-gradient-to-br from-corporate-blue/10 to-logistics-orange/10 backdrop-blur-sm">
+                <CardHeader>
+                  <h3 className="text-xl font-bold text-foreground flex items-center gap-2">
+                    <MapPin className="w-5 h-5 text-logistics-orange" />
+                    Our Locations
+                  </h3>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  {branches.map((branch, index) => (
+                    <div key={index} className="p-4 bg-card/80 backdrop-blur-sm rounded-lg border border-border/50 hover:border-logistics-orange/50 transition-all">
+                      <div className="flex items-start justify-between mb-2">
+                        <h4 className="font-semibold text-foreground text-lg">{branch.name}</h4>
                         <span 
-                          className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                          className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap ${
                             branch.status === 'Operational' 
-                              ? 'bg-green-100 text-green-800' 
-                              : 'bg-yellow-100 text-yellow-800'
+                              ? 'bg-green-500/20 text-green-700 dark:text-green-400' 
+                              : 'bg-yellow-500/20 text-yellow-700 dark:text-yellow-400'
                           }`}
                         >
                           {branch.status}
                         </span>
                       </div>
-                    ))}
-                  </div>
+                      <p className="text-sm text-muted-foreground">{branch.address}</p>
+                    </div>
+                  ))}
                 </CardContent>
               </Card>
 
               {/* Call to Action */}
-              <Card className="border-0 shadow-corporate bg-gradient-hero text-primary-foreground">
-                <CardContent className="p-8 text-center">
-                  <h3 className="text-2xl font-bold mb-4">Ready to Get Started?</h3>
-                  <p className="text-primary-foreground/90 mb-6">
-                    Our team is ready to provide you with a customized logistics solution. 
-                    Contact us today for competitive pricing and reliable service.
+              <Card className="border-0 shadow-2xl bg-gradient-hero text-white overflow-hidden relative">
+                <div className="absolute inset-0 bg-gradient-to-br from-corporate-blue via-logistics-orange/80 to-corporate-blue opacity-90"></div>
+                <CardContent className="p-8 text-center relative z-10">
+                  <Phone className="w-12 h-12 mx-auto mb-4 animate-pulse" />
+                  <h3 className="text-2xl font-bold mb-3">Need Immediate Assistance?</h3>
+                  <p className="text-white/90 mb-6 text-lg">
+                    Our logistics experts are ready to help you 24/7
                   </p>
-                  <Button variant="accent" size="lg">
-                    Call Now: +91 9359001122
-                  </Button>
+                  <a href="tel:+919359001122">
+                    <Button variant="outline" size="lg" className="bg-white text-corporate-blue hover:bg-white/90 border-0 text-lg font-bold h-14 px-8">
+                      📞 +91 9359001122
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             </div>
