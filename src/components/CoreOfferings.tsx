@@ -147,25 +147,6 @@ const CoreOfferings = () => {
             })}
           </div>
 
-          {/* Warehouse Image */}
-          <div className="mb-16">
-            <Card className="border-0 shadow-corporate overflow-hidden">
-              <div className="relative h-96">
-                <img 
-                  src={warehouseFacility} 
-                  alt="Modern warehouse facility"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex items-end">
-                  <div className="p-8 text-white">
-                    <h3 className="text-3xl font-bold mb-2">75 Million Cu. Ft. Warehousing Capacity</h3>
-                    <p className="text-lg">Extensive 3PL & 4PL warehousing solutions with state-of-the-art infrastructure</p>
-                  </div>
-                </div>
-              </div>
-            </Card>
-          </div>
-
           {/* Cost Reduction & Revenue Enhancement */}
           <div className="grid md:grid-cols-2 gap-8">
             {/* Cost Reduction */}
