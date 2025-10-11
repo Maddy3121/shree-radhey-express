@@ -1,5 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Package, ShoppingCart, Shirt, Zap, Wine, Store, ShoppingBag, Wrench } from "lucide-react";
+import { Package, ShoppingCart, Shirt, Zap, Store, ShoppingBag, Wrench } from "lucide-react";
 import industryPharma from "@/assets/industry-pharma.jpg";
 import industryFmcg from "@/assets/industry-fmcg.jpg";
 import industryApparel from "@/assets/industry-apparel.jpg";
@@ -30,11 +30,6 @@ const IndustriesServed = () => {
       description: "Safe handling of sensitive electronic goods"
     },
     {
-      icon: Wine,
-      name: "Alcoholic Beverages & Tobacco",
-      description: "Secure and compliant transportation"
-    },
-    {
       icon: Store,
       name: "Retail Outlets",
       description: "Last-mile delivery for retail chains"
@@ -49,15 +44,6 @@ const IndustriesServed = () => {
       name: "Auto & Engineering",
       description: "Heavy equipment and automotive parts logistics"
     }
-  ];
-
-  const stats = [
-    { value: "19,000+", label: "Pin Codes Covered" },
-    { value: "76+", label: "Warehouses" },
-    { value: "725", label: "Districts Covered" },
-    { value: "2,000+", label: "Employees" },
-    { value: "150,000+", label: "Retail SKUs Handled" },
-    { value: "20+", label: "Global Brands" }
   ];
 
   return (
@@ -76,7 +62,7 @@ const IndustriesServed = () => {
           </div>
 
           {/* Industries Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {industries.map((industry, index) => {
               const IconComponent = industry.icon;
               return (
@@ -105,26 +91,6 @@ const IndustriesServed = () => {
               );
             })}
           </div>
-
-          {/* Statistics */}
-          <Card className="border-0 shadow-corporate bg-gradient-hero text-primary-foreground">
-            <CardContent className="p-8">
-              <h3 className="text-3xl font-bold text-center mb-8">Our Reach & Capabilities</h3>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-                {stats.map((stat, index) => (
-                  <div 
-                    key={index} 
-                    className="text-center hover-scale"
-                  >
-                    <div className="text-3xl md:text-4xl font-bold text-logistics-orange mb-2">
-                      {stat.value}
-                    </div>
-                    <div className="text-sm">{stat.label}</div>
-                  </div>
-                ))}
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </section>
