@@ -33,11 +33,11 @@ function TruckMesh({ scrollProgress, isAnimating }: TruckMeshProps) {
 
   return (
     <mesh ref={meshRef} position={[0, 0, 0]}>
-      <planeGeometry args={[3, 2]} />
+      <planeGeometry args={[4, 3]} />
       <meshBasicMaterial 
         map={texture} 
         transparent 
-        opacity={0.95}
+        opacity={1}
         side={THREE.DoubleSide}
       />
     </mesh>

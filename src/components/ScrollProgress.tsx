@@ -30,15 +30,15 @@ const ScrollProgress = () => {
   return (
     <>
       {/* Progress Bar at Top with Truck */}
-      <div className="fixed top-0 left-0 right-0 h-1.5 bg-muted/30 z-[100] shadow-sm">
+      <div className="fixed top-0 left-0 right-0 h-2 bg-muted z-[100] shadow-md backdrop-blur-sm">
         <div 
-          className="h-full bg-gradient-accent transition-all duration-150 ease-out relative"
+          className="h-full bg-gradient-accent transition-all duration-150 ease-out relative shadow-lg"
           style={{ width: `${scrollProgress}%` }}
         >
           {/* Animated Truck on Progress Bar */}
           <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2">
-            <div className={`bg-logistics-orange text-white p-2 rounded-full shadow-lg ${scrollProgress > 5 ? 'animate-bounce' : ''}`}>
-              <Truck className="w-4 h-4" />
+            <div className={`bg-white p-2.5 rounded-full shadow-2xl border-2 border-logistics-orange ${scrollProgress > 5 ? 'animate-bounce' : ''}`}>
+              <Truck className="w-5 h-5 text-logistics-orange" />
             </div>
           </div>
         </div>
@@ -48,21 +48,21 @@ const ScrollProgress = () => {
       {scrollProgress > 10 && (
         <button
           onClick={handleScrollToTop}
-          className={`fixed bottom-0 right-8 z-50 group transition-all duration-500 ${
+          className={`fixed bottom-0 right-4 z-50 group transition-all duration-500 ${
             isAnimating ? 'animate-[slideUp_1s_ease-in-out]' : ''
           }`}
           aria-label="Scroll to top"
           style={{
-            transform: `translateY(${100 - scrollProgress}%)`,
+            transform: `translateY(${Math.max(20, 100 - scrollProgress)}%)`,
           }}
         >
           {/* 3D Truck Container - Partially off screen */}
-          <div className="relative w-32 h-32 overflow-visible">
+          <div className="relative w-40 h-40">
             {/* 3D Canvas for Truck */}
             <div className="absolute inset-0 transform hover:scale-110 transition-transform duration-300">
               <Suspense fallback={
                 <div className="w-full h-full flex items-center justify-center">
-                  <Truck className="w-16 h-16 text-logistics-orange animate-pulse" />
+                  <Truck className="w-20 h-20 text-logistics-orange animate-pulse" />
                 </div>
               }>
                 <Truck3D scrollProgress={scrollProgress} isAnimating={isAnimating} />
@@ -70,16 +70,16 @@ const ScrollProgress = () => {
             </div>
             
             {/* Progress Badge */}
-            <div className="absolute -top-2 -right-2 bg-gradient-accent text-white text-sm font-bold px-3 py-1.5 rounded-full shadow-2xl border-2 border-white z-10 animate-pulse">
+            <div className="absolute top-2 right-2 bg-gradient-accent text-white text-base font-bold px-4 py-2 rounded-full shadow-2xl border-2 border-white z-10 animate-pulse">
               {Math.round(scrollProgress)}%
             </div>
 
             {/* Speed Lines Animation */}
             <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-full opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
               <div className="flex flex-col gap-2">
-                <div className="w-12 h-1 bg-logistics-orange/60 rounded animate-[slideRight_0.4s_ease-out_infinite]"></div>
-                <div className="w-10 h-1 bg-logistics-orange/40 rounded animate-[slideRight_0.4s_ease-out_0.1s_infinite]"></div>
-                <div className="w-8 h-1 bg-logistics-orange/20 rounded animate-[slideRight_0.4s_ease-out_0.2s_infinite]"></div>
+                <div className="w-16 h-1.5 bg-logistics-orange rounded animate-[slideRight_0.4s_ease-out_infinite]"></div>
+                <div className="w-12 h-1.5 bg-logistics-orange/60 rounded animate-[slideRight_0.4s_ease-out_0.1s_infinite]"></div>
+                <div className="w-8 h-1.5 bg-logistics-orange/30 rounded animate-[slideRight_0.4s_ease-out_0.2s_infinite]"></div>
               </div>
             </div>
 
@@ -94,7 +94,7 @@ const ScrollProgress = () => {
             </div>
 
             {/* Glow Effect */}
-            <div className="absolute inset-0 bg-logistics-orange/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity -z-10"></div>
+            <div className="absolute inset-0 bg-logistics-orange/30 blur-2xl opacity-0 group-hover:opacity-100 transition-opacity -z-10 rounded-full"></div>
           </div>
         </button>
       )}
