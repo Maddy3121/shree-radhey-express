@@ -13,6 +13,11 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'serif': ['Playfair Display', 'Georgia', 'serif'],
+        'display': ['Playfair Display', 'Georgia', 'serif'],
+      },
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -59,8 +64,12 @@ export default {
         },
         "corporate-blue": "hsl(var(--corporate-blue))",
         "corporate-blue-light": "hsl(var(--corporate-blue-light))",
+        "corporate-blue-dark": "hsl(var(--corporate-blue-dark))",
         "logistics-orange": "hsl(var(--logistics-orange))",
         "logistics-orange-light": "hsl(var(--logistics-orange-light))",
+        "logistics-orange-dark": "hsl(var(--logistics-orange-dark))",
+        "gold-accent": "hsl(var(--gold-accent))",
+        "gold-light": "hsl(var(--gold-light))",
       },
       borderRadius: {
         lg: "var(--radius)",
@@ -76,10 +85,15 @@ export default {
         'gradient-radial': 'var(--gradient-radial)',
         'gradient-text': 'var(--gradient-text)',
         'gradient-border': 'var(--gradient-border)',
+        'gradient-shine': 'var(--gradient-shine)',
+        'gradient-gold': 'var(--gradient-gold)',
       },
       boxShadow: {
         'corporate': 'var(--shadow-corporate)',
         'accent': 'var(--shadow-accent)',
+        'premium': 'var(--shadow-premium)',
+        'glow': 'var(--shadow-glow)',
+        'gold': 'var(--shadow-gold)',
       },
       keyframes: {
         "accordion-down": {
