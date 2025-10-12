@@ -57,7 +57,7 @@ const ScrollProgress = () => {
           }}
         >
           {/* 3D Truck Container - Show more of the truck */}
-          <div className="relative w-36 h-36">
+          <div className="relative w-40 h-40">
             {/* 3D Canvas for Truck */}
             <div className="absolute inset-0 transform hover:scale-110 transition-transform duration-300">
               <Suspense fallback={
