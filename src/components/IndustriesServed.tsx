@@ -3,6 +3,10 @@ import { Package, ShoppingCart, Shirt, Zap, Store, ShoppingBag, Wrench } from "l
 import industryPharma from "@/assets/industry-pharma.jpg";
 import industryFmcg from "@/assets/industry-fmcg.jpg";
 import industryApparel from "@/assets/industry-apparel.jpg";
+import industryElectronics from "@/assets/industry-electronics.jpg";
+import industryRetail from "@/assets/industry-retail.jpg";
+import industryEcommerce from "@/assets/industry-ecommerce.jpg";
+import industryAuto from "@/assets/industry-auto.jpg";
 
 const IndustriesServed = () => {
   const industries = [
@@ -27,22 +31,26 @@ const IndustriesServed = () => {
     {
       icon: Zap,
       name: "Electronics & Electricals",
-      description: "Safe handling of sensitive electronic goods"
+      description: "Safe handling of sensitive electronic goods",
+      image: industryElectronics
     },
     {
       icon: Store,
       name: "Retail Outlets",
-      description: "Last-mile delivery for retail chains"
+      description: "Last-mile delivery for retail chains",
+      image: industryRetail
     },
     {
       icon: ShoppingBag,
       name: "E-commerce",
-      description: "Fulfillment and distribution for online businesses"
+      description: "Fulfillment and distribution for online businesses",
+      image: industryEcommerce
     },
     {
       icon: Wrench,
       name: "Auto & Engineering",
-      description: "Heavy equipment and automotive parts logistics"
+      description: "Heavy equipment and automotive parts logistics",
+      image: industryAuto
     }
   ];
 
