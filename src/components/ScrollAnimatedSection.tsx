@@ -36,7 +36,7 @@ const ScrollAnimatedSection = ({
     <div
       ref={ref}
       className={`
-        transition-all duration-400 ease-out
+        transition-all duration-700 ease-out
         ${isVisible ? visibleClasses[animation] : animationClasses[animation]}
         ${className}
       `}
