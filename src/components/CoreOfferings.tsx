@@ -1,12 +1,16 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Warehouse, Cpu, Package, TrendingDown, TrendingUp } from "lucide-react";
 import warehouseFacility from "@/assets/warehouse-facility.jpg";
+import serviceDistribution from "@/assets/service-distribution.jpg";
+import techInnovation from "@/assets/tech-innovation.jpg";
+import serviceCapabilities from "@/assets/service-capabilities.jpg";
 
 const CoreOfferings = () => {
   const offerings = [
     {
       icon: Warehouse,
       title: "End-to-End Supply Chain",
+      image: serviceDistribution,
       items: [
         "Warehouse/Storage Solutions - 3PL/4PL services",
         "Fulfilment Centre Services (B2B/B2C/D2C/D2B)",
@@ -20,6 +24,7 @@ const CoreOfferings = () => {
     {
       icon: Cpu,
       title: "Technology and Innovation",
+      image: techInnovation,
       items: [
         "Customised Dashboards for Detailed Insights",
         "Control Tower",
@@ -33,6 +38,7 @@ const CoreOfferings = () => {
     {
       icon: Package,
       title: "Service Capabilities",
+      image: serviceCapabilities,
       items: [
         "E-commerce Operations Handling",
         "Quick Commerce Fulfilment",
@@ -125,7 +131,17 @@ const CoreOfferings = () => {
             {offerings.map((offering, index) => {
               const IconComponent = offering.icon;
               return (
-                <Card key={index} className="border-0 shadow-corporate hover:shadow-accent transition-all duration-300">
+                <Card key={index} className="border-0 shadow-corporate hover:shadow-accent transition-all duration-300 overflow-hidden group">
+                  {offering.image && (
+                    <div className="relative h-40 overflow-hidden">
+                      <img 
+                        src={offering.image} 
+                        alt={offering.title}
+                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                    </div>
+                  )}
                   <CardHeader>
                     <div className="w-14 h-14 bg-gradient-primary rounded-full flex items-center justify-center mb-4">
                       <IconComponent className="w-7 h-7 text-primary-foreground" />

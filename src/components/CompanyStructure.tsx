@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Users, Building, MapPin, TrendingUp } from "lucide-react";
+import officeBuilding from "@/assets/office-building.jpg";
 
 const CompanyStructure = () => {
   const stats = [
@@ -120,37 +121,43 @@ const CompanyStructure = () => {
           </div>
 
           {/* Capital Investment */}
-          <Card className="border-0 shadow-corporate bg-gradient-primary text-primary-foreground">
-            <CardContent className="p-8">
-              <div className="grid md:grid-cols-2 gap-8 items-center">
-                <div>
-                  <TrendingUp className="w-12 h-12 mb-4" />
-                  <h3 className="text-2xl font-bold mb-4">Strong Financial Foundation</h3>
-                  <p className="text-primary-foreground/90 mb-4">
-                    Established as a Private Limited company with a robust initial capital investment to support our expansion plans.
-                  </p>
-                  <ul className="space-y-2 text-primary-foreground/80">
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
-                      Initial capital of ₹20 lakhs
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
-                      Strategic investment in infrastructure
-                    </li>
-                    <li className="flex items-center">
-                      <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
-                      Expansion-ready financial planning
-                    </li>
-                  </ul>
-                </div>
-                <div className="text-center">
-                  <div className="text-6xl font-bold text-logistics-orange mb-4">₹20L</div>
-                  <div className="text-xl font-semibold">Initial Capital</div>
-                  <div className="text-primary-foreground/80 mt-2">Driving growth and expansion</div>
-                </div>
+          <Card className="border-0 shadow-corporate overflow-hidden">
+            <div className="grid md:grid-cols-2">
+              <div className="relative h-64 md:h-auto">
+                <img 
+                  src={officeBuilding} 
+                  alt="Modern office building"
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-primary/80"></div>
               </div>
-            </CardContent>
+              <CardContent className="p-8 bg-gradient-primary text-primary-foreground flex flex-col justify-center">
+                <TrendingUp className="w-12 h-12 mb-4" />
+                <h3 className="text-2xl font-bold mb-4">Strong Financial Foundation</h3>
+                <p className="text-primary-foreground/90 mb-4">
+                  Established as a Private Limited company with a robust initial capital investment to support our expansion plans.
+                </p>
+                <ul className="space-y-2 text-primary-foreground/80 mb-6">
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                    Initial capital of ₹20 lakhs
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                    Strategic investment in infrastructure
+                  </li>
+                  <li className="flex items-center">
+                    <div className="w-2 h-2 bg-logistics-orange rounded-full mr-3"></div>
+                    Expansion-ready financial planning
+                  </li>
+                </ul>
+                <div className="text-center bg-primary-foreground/10 rounded-lg p-6">
+                  <div className="text-5xl font-bold text-logistics-orange mb-2">₹20L</div>
+                  <div className="text-xl font-semibold">Initial Capital</div>
+                  <div className="text-primary-foreground/80 mt-1">Driving growth and expansion</div>
+                </div>
+              </CardContent>
+            </div>
           </Card>
         </div>
       </div>
