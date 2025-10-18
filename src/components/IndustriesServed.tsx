@@ -76,24 +76,25 @@ const IndustriesServed = () => {
               return (
                 <Card 
                   key={index} 
-                  className="border-0 shadow-corporate hover:shadow-accent transition-all duration-300 group overflow-hidden"
+                  className="border-0 shadow-premium hover:shadow-luxury transition-all duration-500 group overflow-hidden relative"
                 >
                   {industry.image && (
-                    <div className="relative h-32 overflow-hidden">
+                    <div className="relative h-40 overflow-hidden">
                       <img 
                         src={industry.image} 
                         alt={industry.name}
-                        className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+                      <div className="absolute inset-0 bg-gradient-premium-glow opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                     </div>
                   )}
                   <CardContent className={industry.image ? "p-6" : "p-6 pt-12"}>
-                    <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center mb-4 group-hover:shadow-accent transition-all">
-                      <IconComponent className="w-6 h-6 text-primary-foreground" />
+                    <div className="w-14 h-14 bg-gradient-accent rounded-full flex items-center justify-center mb-4 group-hover:shadow-glow transition-all duration-500 -mt-10 relative z-10 border-4 border-card">
+                      <IconComponent className="w-7 h-7 text-white" />
                     </div>
-                    <h3 className="text-lg font-bold text-foreground mb-2">{industry.name}</h3>
-                    <p className="text-sm text-muted-foreground">{industry.description}</p>
+                    <h3 className="text-lg font-bold text-foreground mb-2 group-hover:text-logistics-orange transition-colors duration-300">{industry.name}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{industry.description}</p>
                   </CardContent>
                 </Card>
               );

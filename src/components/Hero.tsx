@@ -31,17 +31,18 @@ const Hero = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-[scale-in_1.4s_ease-out]">
             <Button 
+              variant="accent"
               size="lg"
               onClick={scrollToContact}
-              className="text-lg px-8 py-6 bg-logistics-orange hover:bg-logistics-orange-light text-white hover:shadow-accent"
+              className="text-lg px-8 py-6"
             >
               Get Quote Now
             </Button>
             <Button 
-              variant="outline" 
+              variant="hero" 
               size="lg"
               onClick={() => document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-lg px-8 py-6 border-2 border-white text-white hover:bg-white hover:text-corporate-blue"
+              className="text-lg px-8 py-6"
             >
               Learn More
             </Button>

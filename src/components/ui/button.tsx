@@ -19,6 +19,7 @@ const buttonVariants = cva(
         accent: "bg-gradient-accent text-accent-foreground hover:shadow-glow transition-all duration-500 font-semibold relative overflow-hidden shine-effect",
         premium: "bg-gradient-diagonal text-white hover:shadow-luxury transition-all duration-500 font-bold border border-gold-accent/30 relative overflow-hidden",
         luxury: "bg-gradient-gold text-corporate-blue-dark hover:shadow-gold transition-all duration-500 font-bold relative overflow-hidden shine-effect",
+        hero: "border-2 border-white/80 bg-white/10 text-white backdrop-blur-sm hover:bg-white hover:text-corporate-blue hover:shadow-luxury transition-all duration-300 font-semibold",
       },
       size: {
         default: "h-10 px-4 py-2",
