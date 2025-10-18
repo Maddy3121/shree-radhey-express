@@ -15,7 +15,8 @@ import ScrollProgress from "@/components/ScrollProgress";
 
 const Index = () => {
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen pt-20 relative">
+      <div className="fixed inset-0 bg-gradient-to-br from-background via-background to-corporate-blue-dark/5 -z-10"></div>
       <ScrollProgress />
       <ThemeSwitcher />
       <Navigation />

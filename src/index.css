@@ -423,9 +423,49 @@ html {
 
 /* Premium Glass Effect */
 .glass-effect {
-  background: hsl(var(--background) / 0.8);
-  backdrop-filter: blur(20px);
-  border: 1px solid hsl(var(--border) / 0.5);
+  background: hsl(var(--background) / 0.7);
+  backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid hsl(var(--border) / 0.3);
   box-shadow: var(--shadow-premium);
 }
+
+/* Tech hover effects */
+.hover-scale {
+  @apply transition-all duration-500 ease-out;
+}
+
+.hover-scale:hover {
+  @apply scale-105;
+  filter: brightness(1.1) drop-shadow(0 0 20px hsl(var(--logistics-orange) / 0.5));
+}
+
+/* Neon glow text */
+.neon-text {
+  text-shadow: 
+    0 0 10px hsl(var(--logistics-orange) / 0.8),
+    0 0 20px hsl(var(--logistics-orange) / 0.6),
+    0 0 30px hsl(var(--logistics-orange) / 0.4),
+    0 0 40px hsl(var(--logistics-orange) / 0.2);
+}
+
+/* Hexagon pattern */
+.hex-pattern {
+  position: relative;
+}
+
+.hex-pattern::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle, hsl(var(--logistics-orange) / 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+.hex-pattern:hover::before {
+  opacity: 1;
+}
+
 }
